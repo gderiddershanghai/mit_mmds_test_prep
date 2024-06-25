@@ -431,3 +431,12 @@ newman_networks_c8_oe10 = {
     'correct_answer': "Eigenvector centrality considers not just the number of connections a node has, but also the importance of those connections, providing a more nuanced view of a node's influence. Betweenness centrality measures how often a node appears on the shortest paths between other nodes, indicating its role in facilitating communication. These centrality measures offer deeper insights into network dynamics by identifying influential nodes that might not be evident through degree centrality alone, such as connectors or brokers in social networks or key routers in communication networks.",
     'chapter_information': "Newman Networks Chapter 8"
 }
+
+OPEN_QUESTIONS = []
+global_items = list(globals().items())
+
+for name, value in global_items:
+    if not name.startswith('_'):
+        OPEN_QUESTIONS.append(value)
+
+OPEN_QUESTIONS = OPEN_QUESTIONS[:-1]

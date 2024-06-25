@@ -733,7 +733,7 @@ lecture_graph_basics_mcq17 = {
         'Breadth-first search',
         'Matrix multiplication of the adjacency matrix',
         'Shortest path algorithm',
-        'Dijkstra's algorithm'
+        'Dijkstra\'s algorithm'
     ],
     'correct_answer': 'Matrix multiplication of the adjacency matrix',
     'explanation': "New friends can be suggested in a social network by multiplying the adjacency matrix with itself to find common neighbors, indicating potential new friendships.",
@@ -778,3 +778,250 @@ lecture_graph_basics_mcq20 = {
     'explanation': "In a bipartite network, nodes are divided into two disjoint sets, and edges only connect nodes from different sets, not within the same set.",
     'chapter_information': "Lecture Graph Basics"
 }
+
+
+################################
+lecture_graph_basics_mcq01x = {
+    'question': "What is the diameter of a network?",
+    'options_list': [
+        'The average degree of the nodes',
+        'The largest distance between any two nodes',
+        'The number of edges in the network',
+        'The clustering coefficient'
+    ],
+    'correct_answer': 'The largest distance between any two nodes',
+    'explanation': "The diameter of a network is defined as the largest distance (shortest path) between any two nodes.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq02x = {
+    'question': "Which algorithm is used to compute the shortest path in a weighted network?",
+    'options_list': [
+        'Breadth-First Search (BFS)',
+        'Depth-First Search (DFS)',
+        'Dijkstra\'s Algorithm',
+        'Floyd-Warshall Algorithm'
+    ],
+    'correct_answer': 'Dijkstra\'s Algorithm',
+    'explanation': "Dijkstra's Algorithm is used to compute the shortest path between nodes in a weighted network.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq03x = {
+    'question': "What does a clustering coefficient measure in a network?",
+    'options_list': [
+        'The number of edges divided by the number of nodes',
+        'The average degree of the nodes',
+        'The tendency of nodes to form triangles',
+        'The longest shortest path between any two nodes'
+    ],
+    'correct_answer': 'The tendency of nodes to form triangles',
+    'explanation': "The clustering coefficient measures how likely it is for a node's neighbors to be connected, indicating the tendency of nodes to form triangles.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq04x = {
+    'question': "What is modularity in the context of network analysis?",
+    'options_list': [
+        'The number of edges in the network',
+        'The fraction of edges between nodes of the same type, normalized',
+        'The largest distance between any two nodes',
+        'The degree distribution of the network'
+    ],
+    'correct_answer': 'The fraction of edges between nodes of the same type, normalized',
+    'explanation': "Modularity is a measure of the strength of division of a network into modules (clusters), comparing the fraction of edges within the same type of nodes to what is expected by chance.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq05x = {
+    'question': "What is the significance of the '6 degrees of separation' concept in social networks?",
+    'options_list': [
+        'It indicates the clustering coefficient of the network.',
+        'It suggests that any two people are connected through at most six steps.',
+        'It defines the diameter of the network.',
+        'It measures the density of the network.'
+    ],
+    'correct_answer': 'It suggests that any two people are connected through at most six steps.',
+    'explanation': "The '6 degrees of separation' concept suggests that any two individuals in a social network are connected through a chain of at most six people.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq06x = {
+    'question': "Which of the following is NOT a method for measuring the structure of a network?",
+    'options_list': [
+        'Degree distribution',
+        'Clustering coefficient',
+        'Average distance',
+        'Modularity'
+    ],
+    'correct_answer': 'Modularity',
+    'explanation': "Modularity is used to measure the strength of division of a network into clusters, not the overall structure of the network.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq07x = {
+    'question': "What is a key characteristic of homophily in social networks?",
+    'options_list': [
+        'Nodes of different types are more likely to be connected.',
+        'Nodes of the same type are more likely to be connected.',
+        'The network has a high clustering coefficient.',
+        'The network has a large diameter.'
+    ],
+    'correct_answer': 'Nodes of the same type are more likely to be connected.',
+    'explanation': "Homophily is the tendency for nodes of the same type to be more connected than nodes of different types.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+lecture_graph_basics_mcq08x = {
+    'question': "What is a bipartite network?",
+    'options_list': [
+        'A network with two connected components.',
+        'A network with edges that only connect nodes from two different sets.',
+        'A network where every node is connected to every other node.',
+        'A network with directed and undirected edges.'
+    ],
+    'correct_answer': 'A network with edges that only connect nodes from two different sets.',
+    'explanation': "In a bipartite network, nodes are divided into two disjoint sets, and edges only connect nodes from different sets, not within the same set.",
+    'chapter_information': "Lecture Graph Basics"
+}
+
+################################
+fb_social_graph_mcq01 = {
+    'question': "What is a connected component in the context of a social network graph?",
+    'options_list': [
+        'A group of nodes where each node is directly connected to every other node.',
+        'A group of nodes where there is a path between any two nodes within the group.',
+        'A single node with no edges connecting it to other nodes.',
+        'A pair of nodes connected by a single edge.'
+    ],
+    'correct_answer': 'A group of nodes where there is a path between any two nodes within the group.',
+    'explanation': "In graph theory, a connected component is a subset of nodes such that there is a path between any pair of nodes within the subset.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq02 = {
+    'question': "What does the term 'degree distribution' refer to in a social network graph?",
+    'options_list': [
+        'The total number of nodes in the graph.',
+        'The distribution of the number of connections (or friends) each node has.',
+        'The arrangement of nodes in a specific pattern.',
+        'The average number of connections per node.'
+    ],
+    'correct_answer': 'The distribution of the number of connections (or friends) each node has.',
+    'explanation': "The degree distribution of a graph shows how many nodes have each possible degree (number of connections), indicating the frequency of nodes with a certain number of connections.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq03 = {
+    'question': "What is meant by the 'small-world phenomenon' in social networks?",
+    'options_list': [
+        'Every node is directly connected to every other node.',
+        'Most nodes are not directly connected, but the average path length between any two nodes is short.',
+        'The graph is divided into several disconnected components.',
+        'Each node has a unique identifier.'
+    ],
+    'correct_answer': 'Most nodes are not directly connected, but the average path length between any two nodes is short.',
+    'explanation': "The small-world phenomenon refers to the property of social networks where most nodes can be reached from any other node in a small number of steps, despite not being directly connected.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq04 = {
+    'question': "What does a high clustering coefficient indicate about a social network?",
+    'options_list': [
+        'The network is sparsely connected.',
+        'There are many triangles in the network, indicating that friends of a person are also likely to be friends with each other.',
+        'The network has many isolated nodes.',
+        'The network has a hierarchical structure.'
+    ],
+    'correct_answer': 'There are many triangles in the network, indicating that friends of a person are also likely to be friends with each other.',
+    'explanation': "A high clustering coefficient means that the network has a high tendency for nodes to cluster together, forming triangles where each node is connected to two others.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq05 = {
+    'question': "How does assortativity manifest in a social network like Facebook?",
+    'options_list': [
+        'Users tend to have friends from different demographic groups.',
+        'Users tend to have friends with a similar number of connections (friends).',
+        'Users are randomly connected regardless of their attributes.',
+        'Users have the same number of connections as their friends.'
+    ],
+    'correct_answer': 'Users tend to have friends with a similar number of connections (friends).',
+    'explanation': "Assortativity in a social network indicates that nodes (users) tend to connect with other nodes that have a similar degree (number of connections), showing a preference for similarity.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq06 = {
+    'question': "What is the significance of the 'six degrees of separation' observed in the Facebook social graph?",
+    'options_list': [
+        'Every user is directly connected to six other users.',
+        'Most users can be reached from any other user in about six steps.',
+        'There are six large connected components in the network.',
+        'Each user has exactly six friends.'
+    ],
+    'correct_answer': 'Most users can be reached from any other user in about six steps.',
+    'explanation': "The 'six degrees of separation' phenomenon implies that on average, any two users in the Facebook network are separated by about six steps or connections.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq07 = {
+    'question': "What does the study reveal about the relationship between user engagement (logins) and the number of friends?",
+    'options_list': [
+        'There is no correlation between user engagement and the number of friends.',
+        'Users who log in more frequently tend to have more friends.',
+        'Users who log in less frequently have more friends.',
+        'User engagement decreases as the number of friends increases.'
+    ],
+    'correct_answer': 'Users who log in more frequently tend to have more friends.',
+    'explanation': "The study shows a positive correlation between user engagement, measured by the number of logins, and the number of friends a user has.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq08 = {
+    'question': "What does modularity in the context of the Facebook social network refer to?",
+    'options_list': [
+        'The tendency for the network to be evenly distributed.',
+        'The extent to which the network can be divided into clusters or communities.',
+        'The presence of isolated nodes in the network.',
+        'The frequency of direct connections between nodes.'
+    ],
+    'correct_answer': 'The extent to which the network can be divided into clusters or communities.',
+    'explanation': "Modularity measures the strength of division of a network into clusters or communities, where nodes within the same community are more densely connected to each other than to nodes in other communities.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq09 = {
+    'question': "What is the significance of finding a large giant component in the Facebook social network?",
+    'options_list': [
+        'It indicates that most users are isolated.',
+        'It shows that the majority of users are interconnected, forming a massive connected subgraph.',
+        'It implies that the network has a hierarchical structure.',
+        'It means that users have the same number of friends.'
+    ],
+    'correct_answer': 'It shows that the majority of users are interconnected, forming a massive connected subgraph.',
+    'explanation': "The presence of a giant component means that the majority of users are part of a single, large interconnected subgraph, indicating high overall connectivity within the network.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+fb_social_graph_mcq10 = {
+    'question': "What does the study conclude about gender homophily in the Facebook social network?",
+    'options_list': [
+        'There is a strong preference for same-gender friendships.',
+        'There is no significant gender homophily.',
+        'Male users tend to have more male friends.',
+        'Female users tend to have more female friends.'
+    ],
+    'correct_answer': 'There is no significant gender homophily.',
+    'explanation': "The study found no strong gender homophily, indicating that users do not show a strong preference for forming friendships with others of the same gender.",
+    'chapter_information': "The Anatomy of the Facebook Social Graph"
+}
+
+COURSE_MPC_QUESTIONS = []
+global_items = list(globals().items())
+# print(global_items)
+
+for name, value in global_items:
+    if not name.startswith('_'):
+        COURSE_MPC_QUESTIONS.append(value)
+
+COURSE_MPC_QUESTIONS = COURSE_MPC_QUESTIONS[:-1]
