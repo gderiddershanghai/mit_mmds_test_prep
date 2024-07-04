@@ -432,6 +432,157 @@ newman_networks_c8_oe10 = {
     'chapter_information': "Newman Networks Chapter 8"
 }
 
+
+graph_basics_oe1 = {
+'question': "What are the key differences between a simple network, a multigraph, and a directed network? Provide examples of real-world networks that fit each type.",
+'correct_answer': "A simple network is undirected with at most one edge between any pair of vertices and no self-loops. Examples include the internet and the power grid. A multigraph allows self-loops and multiple links between vertices, such as neural networks and road networks. A directed network has directed edges where an edge (i, j) does not imply (j, i) is also present. Examples include the World Wide Web and citation networks.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe2 = {
+'question': "Explain the concept of an adjacency matrix and its application in representing a graph. How does the adjacency matrix differ for directed and undirected graphs?",
+'correct_answer': "An adjacency matrix is a square matrix used to represent a graph, where the entry at row i and column j indicates the presence (1) or absence (0) of an edge between nodes i and j. For an undirected graph, the matrix is symmetric, whereas for a directed graph, it is not necessarily symmetric.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe3 = {
+'question': "Discuss how the clustering coefficient is used to measure the 'cliquishness' within a network. What does a high clustering coefficient indicate about a network?",
+'correct_answer': "The clustering coefficient measures the degree to which nodes in a network tend to cluster together. It is calculated as the ratio of the number of triangles to the number of connected triples in the network. A high clustering coefficient indicates that there are many closed triplets or triangles, suggesting a high level of local interconnectedness.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe4 = {
+'question': "What are connected components in a network, and why are they important for understanding the structure of large networks?",
+'correct_answer': "Connected components are subsets of a network where any two nodes are reachable from one another. They are important because they help identify isolated subgraphs and the overall connectivity of the network. Large networks often have one giant connected component that encompasses the majority of nodes, which is critical for understanding the network's robustness and functionality.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe5 = {
+'question': "Explain the significance of the degree distribution in a network. How does the degree distribution of a power-law network differ from that of a random network?",
+'correct_answer': "The degree distribution shows the fraction of nodes with a given degree in a network. In a power-law network, the degree distribution follows a heavy-tailed distribution where a few nodes have many connections (hubs), and many nodes have few connections. This contrasts with a random network, like an Erdos-Rényi network, where the degree distribution follows a binomial or Poisson distribution, with most nodes having a similar number of connections.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe6 = {
+'question': "Define edge density in the context of a network. How does edge density help in characterizing different types of networks?",
+'correct_answer': "Edge density is defined as the ratio of the number of edges in the network to the number of possible edges between nodes. It helps characterize networks as sparse or dense. Sparse networks have edge densities that approach zero as the number of nodes increases, such as social networks. Dense networks maintain a higher edge density, such as food webs in ecology.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe7 = {
+'question': "What is the average path length in a network, and how is it calculated? Why is this metric important for understanding network efficiency?",
+'correct_answer': "The average path length is the average number of steps along the shortest paths for all possible pairs of network nodes. It is calculated by finding the shortest path between each pair of nodes and then averaging these lengths. This metric is important for understanding network efficiency because it reflects how quickly information or resources can be transferred across the network.",
+'chapter_information': "Graph Basics"
+}
+
+graph_basics_oe8 = {
+'question': "Describe the small-world property in networks. How does the small-world property affect the dynamics of social networks?",
+'correct_answer': "The small-world property describes networks where most nodes can be reached from every other by a small number of steps, despite the network being large. This property affects the dynamics of social networks by enabling rapid information spread and fostering robust social interactions, as individuals are more likely to be closely connected through mutual acquaintances.",
+'chapter_information': "Graph Basics"
+}
+
+graph_centrality_measures_oe1 = {
+    'question': "Explain the concept of degree centrality and its limitations. In what scenarios might degree centrality not accurately reflect the importance of a node in a network?",
+    'correct_answer': "Degree centrality is the count of the number of connections a node has in a network. It is simple and intuitive, suggesting that nodes with more connections have higher influence and access to information. However, it does not account for the importance of those connections. In networks where influence or importance depends more on the quality of connections rather than the quantity, degree centrality may not be accurate. For example, in social networks, a person with fewer but highly influential friends might be more important than someone with many connections to less influential people.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+graph_centrality_measures_oe2 = {
+    'question': "Compare and contrast eigenvector centrality and Katz centrality. How does Katz centrality address the limitations of eigenvector centrality?",
+    'correct_answer': "Eigenvector centrality assigns scores to nodes based on the principle that connections to high-scoring nodes contribute more to the score of a node. However, it fails in directed graphs with sink nodes because the scores propagate through the graph and end at the sinks, leading to zero scores for some nodes. Katz centrality addresses this by adding a small constant value to every node, ensuring that even nodes with no inbound connections receive some centrality score. This modification allows Katz centrality to be applied to a wider range of network structures, including those with sinks.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+graph_centrality_measures_oe3 = {
+    'question': "Describe how PageRank centrality is computed and discuss its significance in ranking web pages.",
+    'correct_answer': "PageRank centrality measures the importance of nodes in a network by considering the quantity and quality of links. It extends Katz centrality by normalizing the contribution of each node by its out-degree, thereby scaling down the influence of nodes that link to many others. The PageRank algorithm iteratively updates the score of each node based on the scores of its neighbors, scaled by their out-degrees, and a damping factor to account for random jumps. This approach is significant in ranking web pages because it effectively captures both the popularity of a page and the importance of pages that link to it, providing a more reliable measure of relevance.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+graph_centrality_measures_oe4 = {
+    'question': "What are the key differences between closeness centrality and betweenness centrality? How might each be used to identify influential nodes in a network?",
+    'correct_answer': "Closeness centrality measures how close a node is to all other nodes in the network, indicating nodes that can quickly interact with others. Betweenness centrality, on the other hand, measures the extent to which a node lies on paths between other nodes, identifying nodes that act as bridges or bottlenecks. Closeness centrality is useful for identifying nodes that can efficiently spread information or influence, while betweenness centrality highlights nodes critical for maintaining network connectivity and flow. Both metrics can identify influential nodes, but the context of influence—proximity versus connectivity—determines which metric is more appropriate.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+graph_centrality_measures_oe5 = {
+    'question': "Discuss the importance of combining hubs and authorities scores when analyzing networks. How does the HITS algorithm achieve this?",
+    'correct_answer': "Combining hubs and authorities scores is important because it captures two complementary aspects of node importance: being a source of valuable information (hub) and being a destination of valuable information (authority). The HITS (Hyperlink-Induced Topic Search) algorithm iteratively computes two scores for each node: a hub score, which is high if the node points to many authorities, and an authority score, which is high if the node is pointed to by many hubs. This dual approach provides a richer understanding of node roles in the network, particularly in web analysis where some pages are valued for their content and others for their role in linking to valuable content.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+
+# Graph Centrality Measures
+
+graph_centrality_measures_oe1 = {
+    'question': "What are some limitations and criticisms of using betweenness centrality as a measure of influence in networks? Discuss scenarios where betweenness centrality might not be a reliable indicator of a vertex's importance.",
+    'correct_answer': "Limitations of betweenness centrality include its sensitivity to network size and structure changes, its computational intensity for large networks, and its assumption that shortest paths are the primary routes for information flow. Betweenness centrality might not be reliable in scenarios where information or influence spreads through multiple paths or where network dynamics are rapid and constantly changing. Additionally, in networks with many redundant paths, betweenness centrality might overestimate the importance of vertices that have alternative routes.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+graph_centrality_measures_oe2 = {
+    'question': "Describe the concept of flow betweenness and how it extends the idea of betweenness centrality. How does random-walk betweenness differ from standard betweenness centrality?",
+    'correct_answer': "Flow betweenness extends betweenness centrality by considering the maximum possible flow through a vertex when multiple paths can be used simultaneously, rather than only the shortest paths. It accounts for all independent paths between vertex pairs. Random-walk betweenness, on the other hand, measures the betweenness based on the number of times a random walk from one vertex to another passes through a given vertex. Unlike standard betweenness, it includes all possible paths weighted by their likelihood in a random walk, providing a more comprehensive measure of a vertex's role in the network.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+graph_centrality_measures_oe3 = {
+    'question': "How can betweenness centrality be used to assess the resilience of a network? Discuss the implications of high betweenness centrality vertices in terms of network vulnerability and robustness.",
+    'correct_answer': "Betweenness centrality can be used to assess network resilience by identifying critical vertices whose removal would disrupt the shortest paths between other vertices, indicating potential vulnerabilities. High betweenness centrality vertices imply that these vertices are crucial for maintaining connectivity and communication within the network. Their removal could lead to significant fragmentation, making the network less robust and more susceptible to targeted attacks or failures. Identifying such vertices helps in strengthening network resilience by adding redundancy or protection around these critical points.",
+    'chapter_information': "Graph Centrality Measures"
+}
+
+# Spectral Clustering
+
+spectral_clustering_oe1 = {
+    'question': "Explain the role of the graph Laplacian matrix in spectral clustering. How do its eigenvalues and eigenvectors contribute to clustering?",
+    'correct_answer': "The graph Laplacian matrix plays a crucial role in spectral clustering by capturing the structure of the graph. Its eigenvalues and eigenvectors are used to identify clusters. The second smallest eigenvalue, known as the Fiedler value, and its corresponding eigenvector, the Fiedler vector, are particularly important. The Fiedler vector helps in partitioning the graph into clusters by indicating which nodes belong together based on the sign and magnitude of its elements. This method leverages the spectral properties of the graph to achieve an effective clustering solution.",
+    'chapter_information': "Spectral Clustering"
+}
+
+spectral_clustering_oe2 = {
+    'question': "What is modularity maximization in the context of clustering? How does it help in detecting communities within a network?",
+    'correct_answer': "Modularity maximization is a technique used to detect communities in a network by optimizing a modularity score, which measures the density of edges within clusters compared to edges between clusters. High modularity indicates a strong community structure where nodes within the same cluster are more densely connected than with nodes in other clusters. This approach helps in identifying natural divisions within the network, making it easier to understand the underlying structure and organization of the network.",
+    'chapter_information': "Spectral Clustering"
+}
+
+spectral_clustering_oe3 = {
+    'question': "Discuss the relaxation of the ideal clustering problem in spectral clustering. Why is this relaxation necessary, and how does it make the problem computationally tractable?",
+    'correct_answer': "The ideal clustering problem is typically formulated as an optimization problem, which is computationally hard to solve exactly. To make it tractable, the problem is relaxed by allowing continuous values instead of discrete cluster assignments. This relaxation simplifies the optimization process, transforming it into a problem that can be solved using linear algebra techniques, specifically involving the eigenvalues and eigenvectors of the graph Laplacian. This approach retains much of the problem's original structure while making it feasible to solve for large graphs.",
+    'chapter_information': "Spectral Clustering"
+}
+
+graphical_models_oe1 = {
+    'question': "Describe the Erdos-Renyi model and its key properties. How do the edge probability and degree distributions characterize this model?",
+    'correct_answer': "The Erdos-Renyi model is a simple random graph model where a graph is constructed by connecting nodes randomly. Each edge is included in the graph with a fixed probability p, independently of every other edge. Key properties include the expected number of edges, the degree distribution which follows a binomial distribution, and the presence of a phase transition where the graph shifts from having many small components to having one giant component as p increases.",
+    'chapter_information': "Graphical Models"
+}
+
+graphical_models_oe2 = {
+    'question': "Explain the concept of phase transitions in the Erdos-Renyi model. At what point does a giant component emerge, and what implications does this have for real-world networks?",
+    'correct_answer': "Phase transitions in the Erdos-Renyi model refer to the sudden emergence of a giant component as the probability p increases. This transition occurs around p = 1/n, where n is the number of nodes. At this critical threshold, a single large connected component forms, comprising a significant fraction of the entire graph. This concept is important for understanding connectivity in real-world networks, such as the robustness of communication networks or the spread of diseases.",
+    'chapter_information': "Graphical Models"
+}
+
+graphical_models_oe3 = {
+    'question': "What is the Configuration model, and how does it differ from the Erdos-Renyi model? Discuss its advantages in generating networks with specific degree distributions.",
+    'correct_answer': "The Configuration model is a random graph model that allows for the generation of networks with a pre-specified degree distribution. Unlike the Erdos-Renyi model, where edges are added randomly with a fixed probability, the Configuration model starts with a degree sequence and creates stubs for each node according to this sequence. Edges are formed by randomly pairing these stubs. This model is advantageous for studying networks where the degree distribution is known or expected to follow a certain pattern, such as power-law distributions observed in many real-world networks.",
+    'chapter_information': "Graphical Models"
+}
+
+graphical_models_oe4 = {
+    'question': "Describe Price's preferential attachment model. How does this model lead to a power-law degree distribution, and what real-world phenomena does it help explain?",
+    'correct_answer': "Price's preferential attachment model is a generative model for networks where new nodes are more likely to connect to already well-connected nodes. This 'rich get richer' mechanism results in a power-law degree distribution, where a few nodes have very high degrees while most have relatively few connections. This model explains phenomena such as the structure of the World Wide Web, citation networks in academic research, and social networks, where popular nodes or individuals tend to attract more connections over time.",
+    'chapter_information': "Graphical Models"
+}
+
+graphical_models_oe5 = {
+    'question': "What is the Small-World model, and how does it address the limitations of the Erdos-Renyi and Configuration models? Discuss the importance of clustering coefficients and path lengths in this model.",
+    'correct_answer': "The Small-World model, exemplified by the Watts-Strogatz model, aims to capture the high clustering coefficients and short average path lengths observed in many real-world networks. It starts with a regular lattice and introduces randomness by rewiring some edges with a certain probability, creating shortcuts that reduce the average path length while maintaining high clustering. This model addresses the limitations of the Erdos-Renyi and Configuration models, which often produce graphs with either low clustering or unrealistic degree distributions. The Small-World model is important for understanding social networks, biological networks, and other systems where local clusters are tightly connected, but the overall network remains highly navigable.",
+    'chapter_information': "Graphical Models"
+}
+
+
 OPEN_QUESTIONS = []
 global_items = list(globals().items())
 
